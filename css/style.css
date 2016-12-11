@@ -1,67 +1,97 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+	margin: 0;
 }
 
-.navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4rem;
-    background: #e04545;
-}
-
-.brand {
-    float: left;
-}
-
-.brand img {
-    height: 3.5rem;
-}
-
-.navbar a {
-    text-decoration: none;
-}
-
-.brand-name {
-    color: #fff;
-    font-size: 1rem;
-    padding: 1.5rem 1rem;
-}
-
-.navbar-links {
-    //display: inline;
-}
-
-.navbar-links ul {
-}
-
-.navbar-links li {
-    list-style-type: none;
-    display: inline-block;
-    float: right;
-}
-
-.navbar-links ul li a {
-    display: block;
-    color: #fff;
+ul.sidenav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 25%;
+	background-color: #333;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+    box-shadow: 0 0 1rem #000;
     text-align: center;
-    padding: 1.5rem 2rem;
-    font-size: 1rem;
 }
 
-main {
+ul.sidenav li a {
+	display: block;
+	color: #fff;
+	padding: 1rem 2rem;
+	text-decoration: none;
+}
+
+ul.sidenav li a.brand {
+	background-color: #4CAF50;
+	color: #fff;
+    font-size: 2rem;
+}
+
+ul.sidenav li a:hover:not(.brand) {
+	background-color: #555;
+	color: #4CAF50;
+}
+
+div.content {
+	margin-left: 25%;
+	padding: 1rem 2rem;
+	height: 1000px;
+}
+
+@media screen and (min-width: 1050px) {
+
+ul.sidenav li a.active {
+    border-left: solid #4CAF50;
+    animation: pulse 2s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+}
+
+@media screen and (max-width: 1050px) {
+	ul.sidenav {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	ul.sidenav li a {
+		float: left;
+		padding: 16px;
+        line-height:30px;
+	}
+	div.content {
+		margin-left: 0;
+	}
     
-    width: 100%;
-    height: 100vh;
-    background: grey;
 }
 
-.footer {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 4rem;
-    background: #ad3939;
+@media screen and (max-width: 505px) {
+    
+    ul.sidenav {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+
+	div.content {
+		margin-left: 0;
+	}
+    
+	ul.sidenav li a {
+		text-align: center;
+		float: none;
+	}
 }
