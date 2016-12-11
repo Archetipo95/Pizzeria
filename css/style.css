@@ -3,16 +3,58 @@
     padding: 0;
 }
 
-main {
-    height: 200vh;
-}
-
 .navbar {
     top: 0;
     left: 0;
     right: 0;
     height: 4rem;
-    background: #dddddd;
+    background: #e04545;
+}
+
+.brand {
+    float: left;
+}
+
+.brand img {
+    height: 3.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.brand-name {
+    color: #fff;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+}
+
+.navbar-links {
+    //display: inline;
+}
+
+.navbar-links ul {
+}
+
+.navbar-links li {
+    list-style-type: none;
+    display: inline-block;
+    float: right;
+}
+
+.navbar-links ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+}
+
+main {
+    
+    width: 100%;
+    height: 100vh;
+    background: grey;
 }
 
 .footer {
@@ -21,5 +63,5 @@ main {
     right: 0;
     left: 0;
     height: 4rem;
-    background: #dddddd;
+    background: #ad3939;
 }
