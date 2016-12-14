@@ -1,97 +1,135 @@
-body {
-	margin: 0;
-}
-
-ul.sidenav {
-	list-style-type: none;
+* {
 	margin: 0;
 	padding: 0;
-	width: 25%;
-	background-color: #333;
-	position: fixed;
-	height: 100%;
-	overflow: auto;
-    box-shadow: 0 0 1rem #000;
-    text-align: center;
 }
 
-ul.sidenav li a {
-	display: block;
+body {}
+
+.navbar {
+	width: 25%;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	background-color: #ECEFF1;
+	box-shadow: 0 0 1rem #000;
+	overflow: scroll;
+}
+
+.brand {
 	color: #fff;
+	padding: 1rem;
+	font-size: 2rem;
+	background-color: #F44336;
+}
+
+.navbar ul {
+	list-style-type: none;
+}
+
+.navbar ul li a {
+	color: #000000;
+	display: block;
+	font-weight: 600;
+	font-size: 1.5rem;
 	padding: 1rem 2rem;
 	text-decoration: none;
 }
 
-ul.sidenav li a.brand {
-	background-color: #4CAF50;
+.navbar ul li a:hover {
+	background-color: #FF7043;
 	color: #fff;
-    font-size: 2rem;
 }
 
-ul.sidenav li a:hover:not(.brand) {
-	background-color: #555;
-	color: #4CAF50;
+.nav-footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	padding: 1rem;
 }
 
-div.content {
+.content {
 	margin-left: 25%;
 	padding: 1rem 2rem;
-	height: 1000px;
+	height: 300vh;
+	background-image: url(../images/tovaglia.png);
+	background-repeat: repeat;
+	background-position: center;
 }
 
-@media screen and (min-width: 1050px) {
-
-ul.sidenav li a.active {
-    border-left: solid #4CAF50;
-    animation: pulse 2s ease;
+@media screen and (min-width: 1080px) {
+	@media screen and (max-height: 400px) {
+		.nav-footer {
+			position: static;
+		}
+	}
 }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-}
-
-@media screen and (max-width: 1050px) {
-	ul.sidenav {
+/* Tablet mode */
+@media screen and (max-width: 1080px) {
+	.navbar {
 		width: 100%;
 		height: auto;
 		position: relative;
+		font-size: 0;
 	}
-	ul.sidenav li a {
+	.brand {
+		width: 20%;
+		font-size: 1.5rem;
 		float: left;
-		padding: 16px;
-        line-height:30px;
+		padding-left: .5rem;
+		padding-right: .5rem;
 	}
-	div.content {
+	
+	.navbar ul {
+		text-align: right;
+		font-size: 1rem;
+	}
+	
+	.navbar ul li{
+		display: inline-block;
+		text-align: center;
+	}
+	
+	.navbar ul li a{
+		padding-left: .5rem;
+		padding-right: .5rem;
+		padding-bottom: 0;
+		padding-top: inherit;
+		margin-top: 1rem;
+		margin-right: .5rem;
+		border-radius: 2px;
+		
+	}
+	
+	a.active {
+		    border-bottom: solid red .3rem;
+	}
+	
+	.nav-footer {
+		display: none;
+	}
+	
+	.content {
 		margin-left: 0;
 	}
-    
 }
 
-@media screen and (max-width: 505px) {
-    
-    ul.sidenav {
-		width: 100%;
+@media screen and (max-width: 500px) {
+	.navbar {
+		top:0;
+		left: 0;
+		right: 0;
 		height: auto;
 		position: relative;
+		overflow: hidden;
 	}
-
-	div.content {
+	.brand {
+		width: 100%;
+	}
+	ul {
+		display: none;
+	}
+	.content {
 		margin-left: 0;
-	}
-    
-	ul.sidenav li a {
-		text-align: center;
-		float: none;
 	}
 }
