@@ -5,6 +5,15 @@
 
 body {}
 
+img {
+	width: 75%;
+}
+
+.posata {
+	width: auto;
+	height: 350px;
+}
+
 .navbar {
 	width: 25%;
 	height: 100%;
@@ -51,14 +60,14 @@ body {}
 .content {
 	margin-left: 25%;
 	padding: 1rem 2rem;
-	height: 300vh;
+	//height: 300vh;
 	background-image: url(../images/tovaglia.png);
 	background-repeat: repeat;
 	background-position: center;
 }
 
 @media screen and (min-width: 1080px) {
-	@media screen and (max-height: 400px) {
+	@media screen and (max-height: 405px) {
 		.nav-footer {
 			position: static;
 		}
@@ -69,12 +78,11 @@ body {}
 	.navbar {
 		width: 100%;
 		height: auto;
-		position: relative;
+		position: fixed;
 		font-size: 0;
 	}
 	.brand {
-		width: 20%;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		float: left;
 		padding-left: .5rem;
 		padding-right: .5rem;
@@ -82,7 +90,7 @@ body {}
 	
 	.navbar ul {
 		text-align: right;
-		font-size: 1rem;
+		font-size: .8rem;
 	}
 	
 	.navbar ul li{
@@ -98,7 +106,12 @@ body {}
 		margin-top: 1rem;
 		margin-right: .5rem;
 		border-radius: 2px;
+		font-weight: 300;
 		
+	}
+
+	ul {
+		padding-right: 20px;
 	}
 	
 	a.active {
@@ -114,7 +127,7 @@ body {}
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 825px) {
 	.navbar {
 		top:0;
 		left: 0;
