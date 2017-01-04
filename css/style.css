@@ -1,103 +1,151 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/*RESETTER*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 
 /* DESKTOP*/
 @media screen and (min-width: 1080px) {
-    
-    .imgContainer {
-    	display: flex;
-    }
-
-    .imgContainer, img {
-        width: 60rem;
-    }
-    .imgContainer, .posata {
-        width: auto;
-        height: 350px;
-    }
     .navbar {
         width: 25%;
-        height: 100%;
+        height: 100vh;
         position: fixed;
         text-align: center;
         background-color: #ECEFF1;
         box-shadow: 0 0 1rem #000;
         overflow: scroll;
     }
-    .brand {
+    .navbarHead {
         color: #fff;
         padding: 1rem;
         font-size: 2rem;
+        font-weight: 600;
         background-color: #F44336;
     }
-    .navbar ul {
+    .navbarBody {
         list-style-type: none;
     }
-    .navbar ul li a {
-        color: #000000;
+    .navbarBody li a {
+        color: #000;
         display: block;
         font-weight: 600;
         font-size: 1.5rem;
         padding: 1rem 2rem;
         text-decoration: none;
     }
-    .navbar ul li a:hover {
+    .navbarBody li a:hover {
         background-color: #FF7043;
         color: #fff;
     }
-    .nav-footer {
+    .navbarFoot {
+    	list-style-type: none;
         bottom: 0;
         left: 0;
         right: 0;
         position: absolute;
         padding: 1rem;
     }
+
+    .navbarFoot li {
+        font-weight: 600;
+        font-size: 1rem;
+        padding: .3rem;
+    }
+
     .content {
         margin-left: 25%;
         padding: 1rem 2rem;
-        //height: 300vh;
+        height: 300vh;
         background-image: url(../images/tovaglia.png);
         background-repeat: repeat;
         background-position: center;
     }
 }
-/*DESKTOP ALTEZZA*/
+/*DESKTOP FIX ALTEZZA NAVBAR*/
 
 @media screen and (min-width: 1080px) {
-    @media screen and (max-height: 405px) {
-        .nav-footer {
+    @media screen and (max-height: 430px) {
+        .navbarFoot {
             position: static;
         }
     }
 }
-/* Tablet mode */
+/* TABLET MODE */
 
 @media screen and (max-width: 1080px) {
     .navbar {
-        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        /*width: 100%;
         height: auto;
         position: fixed;
-        font-size: 0;
+        font-size: 0;*/
     }
-    .brand {
+    .navbarHead {
+        color: #fff;
+        padding: 1rem;
         font-size: 2rem;
-        float: left;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        font-weight: 600;
+        background-color: #F44336;
+        align-items: center;
+        
+
     }
-    .navbar ul {
+    .navbarBody {
+    	align-items: center;
+
+
         text-align: right;
         font-size: .8rem;
+        padding-right: 20px;
     }
-    .navbar ul li {
+    .navbarBody li {
         display: inline-block;
         text-align: center;
     }
-    .navbar ul li a {
+    .navbarBody li a {
         padding-left: .5rem;
         padding-right: .5rem;
         padding-bottom: 0;
@@ -107,13 +155,7 @@
         border-radius: 2px;
         font-weight: 300;
     }
-    ul {
-        padding-right: 20px;
-    }
-    a.active {
-        border-bottom: solid red .3rem;
-    }
-    .nav-footer {
+    .navbarFoot {
         display: none;
     }
     .content {
