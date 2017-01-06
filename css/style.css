@@ -154,7 +154,6 @@ table {
         text-align: center;
         background-color: #ECEFF1;
         box-shadow: 0 0 1rem #000;
-        
     }
     .navbarHead {
         color: #fff;
@@ -196,20 +195,16 @@ table {
     }
 }
 
-
 /*DESKTOP FIX ALTEZZA NAVBAR*/
 
-@media screen and (min-width: 1080px) {
-    @media screen and (max-height: 430px) {
+@media screen and (min-width: 1080px), screen and (max-height: 430px) {
         .navbar {
             overflow: scroll;
         }
         .navbarFoot {
             position: static;
         }
-    }
 }
-
 
 /* TABLET MODE */
 
@@ -222,6 +217,7 @@ table {
         position: fixed;
         display: flex;
         align-items: center;
+        box-shadow: 0 0 1rem #000;
     }
     .navbarHead {
         color: #fff;
@@ -240,11 +236,10 @@ table {
         align-self: stretch;
         background: #fff;
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 10px;
     }
     .navbarBody li a {
-        
         display: block;
         color: #000;
         font-weight: 600;
@@ -255,7 +250,6 @@ table {
         background-color: #FF7043;
         color: #fff;
     }
-    
     .navbarFoot {
         display: none;
     }
@@ -287,8 +281,7 @@ table {
     .navbarBody, .navbarFoot {
         display: none;
     }
-    
-    
+
     .content {
         margin-left: 0;
     }
